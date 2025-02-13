@@ -7,25 +7,37 @@ import {
 runTitle();
 warmup1();
 
+
 function warmup1() {
     console.log("Exercise week 1");
+    document.querySelector("#button-1a").addEventListener('click', function warmup1(){
+    console.log('click ok');
 
-    document.querySelector("#button-1a").addEventListener('click', function warmup1() {
-        console.log('click ok');
-
-        const p = document.createElement('p');
-        p.innerHTML = "Hallo, dit is de oefening van Michée.";
-
-        // Selecteer de div met id "content-1" en vervang de inhoud
-        const content = document.getElementById("content-1");
-        content.innerHTML = ""; // Leeg de huidige inhoud
-        content.append(p); // voeg het nieuwe p-element toe
-
-
-
-    });
+    const p = document.createElement('p');
+    p.innerHTML = "Hallo, dit is de oefening van Michée";
     
+    const content = document.getElementById('content-1');
+    content.innerHTML = '';
+    content.append(p);
+    });
+
+ document.querySelector("#button-1b").addEventListener('click', function() {
+   const section = document.getElementById('section-1');
+   section.style.backgroundColor = 'lightblue';
+   }); 
+
+document.querySelector('#button-1c').addEventListener('click', function(){
+    const h1 = document.createElement('h1');
+    h1.innerHTML = "Ik ben er klaar voor";
+
+    const content = document.getElementById('content-1');
+    content.append(h1);
+   });
 }
+
+
+
+
 
 function warmup2() {
     console.log("Exercise week 2");
